@@ -205,6 +205,7 @@ int StepToNumber() {
 void castle::PlayGame() {
 	puts("CLI GAME : ADVENTURE");
 	puts("You are the hero! Please find the princess in the castle and take her out of here!");
+	puts("Instruction Example: [go east]");
 	int flag = 0;//初始状态：没接到公主
 	room* last = startPosition;
 	lobbyRoom* lob;
@@ -224,14 +225,14 @@ void castle::PlayGame() {
 			lob->PrintMessage();
 			lob->PrintSteps();
 			if (temp = lob->Execute(StepToNumber())) last = temp;
-			else puts("请输入正确的指令!");
+			else puts("INSTRUCTION ERROR !!!");
 			break;
 		case FUNC_MESSAGE:
 			mes = (messageRoom*)last;
 			mes->PrintMessage();
 			mes->PrintSteps();
 			if (temp = mes->Execute(StepToNumber())) last = temp;
-			else puts("请输入正确的指令!");;
+			else puts("INSTRUCTION ERROR !!!");
 			break;
 		case FUNC_MONSTER:
 			mon = (monsterRoom*)last;
@@ -243,7 +244,7 @@ void castle::PlayGame() {
 			nor->PrintMessage();
 			nor->PrintSteps();
 			if (temp = nor->Execute(StepToNumber())) last = temp;
-			else puts("请输入正确的指令!");
+			else puts("INSTRUCTION ERROR !!!");
 			break;
 		case FUNC_PRINCESS:
 			pri = (princessRoom*)last;
@@ -252,14 +253,14 @@ void castle::PlayGame() {
 			flag = 1;
 			pri->PrintSteps();
 			if (temp = pri->Execute(StepToNumber())) last = temp;
-			else puts("请输入正确的指令!");
+			else puts("INSTRUCTION ERROR !!!");
 			break;
 		case FUNC_TRANS:
 			tra = (transRoom*)last;
 			tra->PrintMessage();
 			tra->PrintSteps();
 			if (temp = tra->Execute(StepToNumber())) last = temp;
-			else puts("请输入正确的指令!");
+			else puts("INSTRUCTION ERROR !!!");
 			break;
 		default:
 			cout << "UNEXPECTED ERROR!" << endl;

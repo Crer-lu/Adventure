@@ -47,7 +47,7 @@ void room::PrintSteps() {
 		cout << "There are 2 exits: east and opposite."<< endl;
 		break;
 	case EASTEST:
-		cout << "There are 2 exits: east and opposite."<< endl;
+		cout << "There are 2 exits: west and opposite."<< endl;
 		break;
 	default:
 		break;
@@ -57,13 +57,13 @@ void room::PrintSteps() {
 
 void lobbyRoom::PrintSteps() {
 	if (down == NULL) {
-		cout << "There are 5 exits: southeast, southwest£¬ northest, northwest and up." << endl;
+		cout << "There are 5 exits: southeast, southwest£¬ northeast, northwest and up." << endl;
 	}
 	else if (up == NULL) {
-		cout << "There are 5 exits: southeast, southwest£¬ northest, northwest and down." << endl;
+		cout << "There are 5 exits: southeast, southwest£¬ northeast, northwest and down." << endl;
 	}
 	else {
-		cout << "There are 6 exits: southeast, southwest£¬ northest, northwest, up and down." << endl;
+		cout << "There are 6 exits: southeast, southwest£¬ northeast, northwest, up and down." << endl;
 	}
 	return;
 }
@@ -105,7 +105,7 @@ void transRoom::PrintSteps() {
 		cout << "There are 3 exits: trans, east and opposite." << endl;
 		break;
 	case EASTEST:
-		cout << "There are 3 exits: trans, east and opposite." << endl;
+		cout << "There are 3 exits: trans, west and opposite." << endl;
 		break;
 	default:
 		break;

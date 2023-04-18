@@ -80,9 +80,7 @@ go east
 
 当然我们还有其它选择，比如 go west、 go up、go southeast等
 
-若移动成功则无提示，如果输入的指令不合法（比如输入单词错误、或者输入的方向不在给定的选择中），提示错误，并且重新提示
-
-<center><img src="./assets/game2.png" style="zoom: 67%;"></center>
+若移动成功则无提示，如果输入的指令不合法（比如输入单词错误、或者输入的方向不在给定的选择中），提示错误（INSTRUCTION ERROR ！！！），并且重新输出该房间的信息和可选的方向。
 
 
 
