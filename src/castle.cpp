@@ -187,8 +187,10 @@ void castle::PrintMap() {
 	return;
 }
 int StepToNumber() {
-	string go, dir;
-	cin >> go >> dir;
+	string dir;
+	getline(cin, dir);
+	if (dir.size() < 4) return 0;
+	dir = dir.substr(3);
 	transform(dir.begin(), dir.end(), dir.begin(), ::toupper);
 	if (dir == "WEST") return WEST;
 	else if (dir == "EAST") return EAST;
